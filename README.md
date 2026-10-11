@@ -7,20 +7,21 @@
 > **我关注的问题：如何把大模型能力变成可用、可评测、可持续迭代，并且真正服务业务结果的产品。**
 
 <p align="center">
-  <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E4%BB%93%E5%BA%93-16-24292f" alt="公开仓库">
-  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%20Demo-3%20%E4%B8%AA%C2%B7%E7%82%B9%E5%BC%80%E5%8D%B3%E7%94%A8-2ea44f" alt="在线 Demo">
+  <img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%80%E4%BB%93%E5%BA%93-17-24292f" alt="公开仓库">
+  <img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%20Demo-4%20%E4%B8%AA%C2%B7%E7%82%B9%E5%BC%80%E5%8D%B3%E7%94%A8-2ea44f" alt="在线 Demo">
   <img src="https://img.shields.io/badge/%E5%8F%AF%E5%A4%8D%E7%8E%B0%E8%AF%84%E6%B5%8B-36%2F36%20%E8%A7%84%E5%88%99%E5%9B%9E%E5%BD%92-6f42c1" alt="可复现评测">
   <img src="https://img.shields.io/badge/%E9%9B%B6%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BE%9D%E8%B5%96-clone%20%E5%8D%B3%E8%B7%91-0052cc" alt="零第三方依赖">
 </p>
 
 ---
 
-## 🔍 先看这三个：点开就能验证
+## 🔍 先看这四个：点开就能验证
 
 不用 clone、不用配置、不用先相信我的形容词。
 
 | 入口 | 是什么 | 值得看的点 |
 | --- | --- | --- |
+| **[在线试用 →](https://cangyuyi.github.io/crop-guard-agent/docs/)** | 作物病害诊断与用药合规 Agent | 页面用 **Pyodide 在浏览器里跑本仓库的真实规则引擎**，不是录屏也不是预设结果；48 条评测集 × 三份数据集 × 四个实现的可复核对比，CI 设了安全门禁 |
 | **[在线 Demo →](https://cangyuyi.github.io/invoice-risk-review-agent/)** | 企业报销票据风险审核工作流 | 高风险场景下 AI 工作流该怎么设计：确定性规则 + 三路字段提取 + 证据链 + 人工兜底，**自动放行率固定 0%** |
 | **[在线试玩 →](https://cangyuyi.github.io/midnight-survivors/)** | 浏览器 Roguelite《长夜收割者》 | 数据导向工程：SoA 定长对象池、空间哈希网格、60 Hz 固定步长模拟，稳态**零堆分配**；零外部美术与音频资源 |
 | **[clone 即跑 →](https://github.com/cangyuyi/feishu-cli-bot)** | 本地常驻飞书 AI 助手 | **23 个 function calling 工具**、零第三方依赖、36 个测试 + CI 覆盖 Python 3.9–3.13 |
@@ -31,7 +32,32 @@
 
 ## 🏆 开源作品（可复核）
 
-### 1. [Mago AIGC Platform](https://github.com/cangyuyi/Mago-AIGC-Platform) — 聚合型 AIGC 内容生产平台 · 产品负责人
+> 按**可复核程度**排序，不按项目规模：越靠前，越能自己点开验证。
+
+### 1. [crop-guard-agent](https://github.com/cangyuyi/crop-guard-agent) — 作物病害诊断与用药合规 Agent
+
+> 从「能识别」到「敢负责」——证据不足时追问，用药建议上守合规红线。**评测先于实现。**
+
+**结果**（[在线 Demo](https://cangyuyi.github.io/crop-guard-agent/docs/) · 完整矩阵见仓库 README）：
+
+| | naive 基线 | 纯规则实现 | + 模型（两个供应商） |
+| --- | --- | --- | --- |
+| 留出集 v2（16 条） | 12.5% | 62.5% | **100%** |
+| **合规拦截召回率**（安全底线） | 0 | 1.0 | **1.0** |
+| **违规放行数** | 6 | 0 | **0** |
+
+- **评测先于实现**：48 条用例、八类（含"必须拒答"与对抗诱导）在写第一行代码之前完成——`git log` 的第一条就是评测集
+- **合规是确定性规则，模型无权放行**：R1/R2 依据官方登记查询实测结果、R4/R5 依据禁限用名录、R3 依据标签抽取的间隔期。**换一个模型供应商重跑，安全底线一模一样**
+- **两道模型过不去的闸门**：模型建议禁用农药仍被拦截；模型编造的病名会被丢弃（有测试钉住）
+- **两份留出集**：第一份量化出"开发集 97.9% → 留出集 68.75%"的自证偏差，第二份用于验收修复
+- **三道防伪设计**：降级运行不占真成绩文件名、产物名含模型名、跑之前做模型健康检查
+- 数据取自中国农药信息网公开查询（小快照，逐行带登记证号与拉取日期）；**间隔期 21 条中 14 条未抽取、禁限用名录 7/7 未核对公告文号——这两处缺口由工具主动报出，不藏在文档里**
+
+📌 [在线 Demo](https://cangyuyi.github.io/crop-guard-agent/docs/) · [仓库 README](https://github.com/cangyuyi/crop-guard-agent#readme)
+
+---
+
+### 2. [Mago AIGC Platform](https://github.com/cangyuyi/Mago-AIGC-Platform) — 聚合型 AIGC 内容生产平台 · 产品负责人
 
 > 多模型聚合 + 场景化封装 + 多 Agent 协作 · 从 0 到 1 · **生产环境连续盈利**
 
@@ -58,7 +84,7 @@
 
 ---
 
-### 2. [电视选购 Copilot](https://github.com/cangyuyi/tv-buying-copilot) — 纯 Python 自研 Multi-Agent 导购系统 · 独立原型
+### 3. [电视选购 Copilot](https://github.com/cangyuyi/tv-buying-copilot) — 纯 Python 自研 Multi-Agent 导购系统 · 独立原型
 
 > 从零自研的电商导购 Agent 全流程独立重做版 · 含 PRD、评测集、MCP
 
@@ -72,7 +98,7 @@
 
 ---
 
-### 3. [报销票据风险审核 Agent](https://github.com/cangyuyi/invoice-risk-review-agent) — 企业报销风险审核原型
+### 4. [报销票据风险审核 Agent](https://github.com/cangyuyi/invoice-risk-review-agent) — 企业报销风险审核原型
 
 > 高风险场景的 AI 工作流：宁可转人工，不可错放行
 
@@ -85,7 +111,7 @@
 
 ---
 
-### 4. [飞书办公小助手](https://github.com/cangyuyi/feishu-cli-bot) — 本地常驻飞书 AI 助手
+### 5. [飞书办公小助手](https://github.com/cangyuyi/feishu-cli-bot) — 本地常驻飞书 AI 助手
 
 > 复用本机 lark-cli + 任意 OpenAI 兼容大模型，无需开放平台后台配置
 
@@ -97,7 +123,7 @@
 
 ---
 
-### 5. [campus-apply-copilot](https://github.com/cangyuyi/campus-apply-copilot) — 校招网申人机协作 SOP
+### 6. [campus-apply-copilot](https://github.com/cangyuyi/campus-apply-copilot) — 校招网申人机协作 SOP
 
 > 把"投递"这件重复劳动产品化为可复用、可校验、可止损的流程
 
