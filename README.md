@@ -34,9 +34,11 @@
 
 > 按**可复核程度**排序，不按项目规模：越靠前，越能自己点开验证。
 
-### 1. [crop-guard-agent](https://github.com/cangyuyi/crop-guard-agent) — 作物病害诊断与用药合规 Agent
+### 1. [crop-guard-agent](https://github.com/cangyuyi/crop-guard-agent) — 高风险 LLM 系统的「可证明安全」工程方法
 
-> 从「能识别」到「敢负责」——证据不足时追问，用药建议上守合规红线。**评测先于实现。**
+> **可判定的结论交给确定性规则，模型无权放行；边界焊在代码里而不是提示词里；用评测门禁证明它守得住。**
+> 以作物用药合规为落地实例，但方法本身不依赖农业——换成信贷审批、医疗建议、保险核保步骤一样。
+> 完整方法含「怎么搬到你的领域」与一份反面清单：[docs/method.md](https://github.com/cangyuyi/crop-guard-agent/blob/main/docs/method.md)
 
 **结果**（[在线 Demo](https://cangyuyi.github.io/crop-guard-agent/docs/) · 完整矩阵见仓库 README）：
 
