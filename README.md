@@ -8,7 +8,7 @@
 
 | 项目 | 我的工作与适用场景 | 现在能核查什么 / 不能证明什么 |
 | --- | --- | --- |
-| **[Mago AIGC Platform](https://github.com/cangyuyi/Mago-AIGC-Platform)** | AIGC 创意生产平台相关产品实践：多模型聚合、Agent 工作台、从需求到工作流设计 | [公开实现与架构](https://github.com/cangyuyi/Mago-AIGC-Platform#readme)、[证据边界](https://github.com/cangyuyi/Mago-AIGC-Platform/blob/main/docs/evidence-boundary.md)。公开代码**不等于**线上生产系统；历史业务成果需单独核对统计口径。 |
+| **[Mago AIGC Platform](https://github.com/cangyuyi/Mago-AIGC-Platform)** | AIGC 创意生产平台相关产品实践：多模型聚合、Agent 工作台、从需求到工作流设计 | [公开实现与架构](https://github.com/cangyuyi/Mago-AIGC-Platform#readme)。公开代码**不等于**线上生产系统；历史业务成果需单独核对统计口径。 |
 | **[crop-guard-agent](https://github.com/cangyuyi/crop-guard-agent)** | 独立工程原型：在作物用药合规案例中，将可判定规则和模型建议分离 | `python3 -m unittest discover -s tests`：40 项测试；[在线演示](https://cangyuyi.github.io/crop-guard-agent/docs/)；安全门禁只在仓库给定数据与测试范围内验证，不能推广为真实农事或跨行业零风险。 |
 | **[invoice-risk-review-agent](https://github.com/cangyuyi/invoice-risk-review-agent)** | 独立票据风险审核原型：字段提取、确定性规则、证据链和人工接管 | `python3 eval/evaluate.py`：36/36 项**合成结构化数据规则回归**；[静态交互演示](https://cangyuyi.github.io/invoice-risk-review-agent/)；不等同于 OCR 准确率或真实税务/审批结果。 |
 
