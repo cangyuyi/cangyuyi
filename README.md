@@ -1,45 +1,134 @@
-# 王泽栋 · AI 产品 / AI 应用 / Agent
+<div align="center">
+  <img src="./assets/profile-header.svg" alt="王泽栋 · AI 产品经理" width="100%" />
+  <br/>
+  <sub>2027 届 · 浙江农林大学智慧农业本科 · AI 产品经理 / AI 应用与 Agent / AI 电商产品</sub>
+  <br/><br/>
+  <a href="#selected-work"><strong>SELECTED WORK</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#how-i-work"><strong>HOW I WORK</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#more-work"><strong>MORE WORK</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:wangzedong2027@foxmail.com"><strong>CONTACT</strong></a>
+</div>
 
-2027 届 · 浙江农林大学智慧农业本科 · 杭州。求职方向：**AI 产品经理、AI 应用 / Agent、AI 电商产品**。
+<br/>
 
-我关注的不是“能否生成一个答案”，而是**需求判断 → 工作流设计 → 可追溯评测 → 风险兜底 → 复盘迭代**。这里既有业务实践，也有独立开发的工程原型；二者的证据和可复现范围不同，下面分别说明。
+> 我关注的不是“模型能否生成一个答案”，而是如何把**需求判断、工作流、可追溯评测和人工兜底**组成真正可用的产品。
 
-## 先看三项代表作
+<a id="selected-work"></a>
+## Selected Work / 精选作品
 
-| 项目 | 我的工作与适用场景 | 现在能核查什么 / 不能证明什么 |
-| --- | --- | --- |
-| **[Mago AIGC Platform](https://github.com/cangyuyi/Mago-AIGC-Platform)** | AIGC 创意生产平台相关产品实践：多模型聚合、Agent 工作台、从需求到工作流设计 | [公开实现与架构](https://github.com/cangyuyi/Mago-AIGC-Platform#readme)。公开代码**不等于**线上生产系统；历史业务成果需单独核对统计口径。 |
-| **[crop-guard-agent](https://github.com/cangyuyi/crop-guard-agent)** | 独立工程原型：在作物用药合规案例中，将可判定规则和模型建议分离 | `python3 -m unittest discover -s tests`：40 项测试；[在线演示](https://cangyuyi.github.io/crop-guard-agent/docs/)；安全门禁只在仓库给定数据与测试范围内验证，不能推广为真实农事或跨行业零风险。 |
-| **[invoice-risk-review-agent](https://github.com/cangyuyi/invoice-risk-review-agent)** | 独立票据风险审核原型：字段提取、确定性规则、证据链和人工接管 | `python3 eval/evaluate.py`：36/36 项**合成结构化数据规则回归**；[静态交互演示](https://cangyuyi.github.io/invoice-risk-review-agent/)；不等同于 OCR 准确率或真实税务/审批结果。 |
+<table>
+  <tr>
+    <td width="33.33%" valign="top">
+      <a href="https://github.com/cangyuyi/Mago-AIGC-Platform"><img src="./assets/project-mago.svg" alt="Mago AIGC Platform" width="100%"/></a>
+      <br/><br/>
+      <strong>Mago AIGC Platform</strong><br/>
+      <sub>多模型聚合与 Agent 创意工作台，覆盖选题、脚本、分镜和提示词生产。</sub><br/><br/>
+      <a href="https://github.com/cangyuyi/Mago-AIGC-Platform#readme">查看架构与运行说明 →</a>
+    </td>
+    <td width="33.33%" valign="top">
+      <a href="https://cangyuyi.github.io/crop-guard-agent/docs/"><img src="./assets/project-crop-guard.svg" alt="Crop Guard Agent" width="100%"/></a>
+      <br/><br/>
+      <strong>crop-guard-agent</strong><br/>
+      <sub>将合规规则与模型建议分离，用留出集和安全门禁验证高风险工作流。</sub><br/><br/>
+      <a href="https://cangyuyi.github.io/crop-guard-agent/docs/">在线 Demo</a> · <a href="https://github.com/cangyuyi/crop-guard-agent/blob/main/docs/method.md">方法文档 →</a>
+    </td>
+    <td width="33.33%" valign="top">
+      <a href="https://cangyuyi.github.io/invoice-risk-review-agent/"><img src="./assets/project-invoice.svg" alt="Invoice Risk Review Agent" width="100%"/></a>
+      <br/><br/>
+      <strong>invoice-risk-review-agent</strong><br/>
+      <sub>二维码优先、OCR 降级，结合确定性风险规则、证据链与人工复核。</sub><br/><br/>
+      <a href="https://cangyuyi.github.io/invoice-risk-review-agent/">交互 Demo</a> · <a href="https://github.com/cangyuyi/invoice-risk-review-agent#评测证据">评测证据 →</a>
+    </td>
+  </tr>
+</table>
 
-**阅读顺序**：招聘方先看 Mago 的产品决策与职责，再看 crop-guard 的规则/评测门禁，最后看 invoice 的人机协作与证据链。所有演示以各仓库 README 的实际前置条件为准。
+<a id="how-i-work"></a>
+## How I Work / 我的工作方式
 
-## 业务实践与独立复现
+<table>
+  <tr>
+    <td width="33.33%" valign="top">
+      <sub>01 / DISCOVER</sub><br/><br/>
+      <strong>先判断，再选择模型</strong><br/><br/>
+      <sub>从真实用户任务出发，区分哪些环节需要语义智能，哪些环节应该使用确定性规则。</sub>
+    </td>
+    <td width="33.33%" valign="top">
+      <sub>02 / ORCHESTRATE</sub><br/><br/>
+      <strong>设计完整工作流</strong><br/><br/>
+      <sub>把模型、工具、数据和人工确认组织成可运行的系统，而不是堆叠 Agent 数量。</sub>
+    </td>
+    <td width="33.33%" valign="top">
+      <sub>03 / VERIFY</sub><br/><br/>
+      <strong>让结果可以被验证</strong><br/><br/>
+      <sub>用评测集、规则门禁、失败案例和证据链检查结果，明确原型与生产系统的边界。</sub>
+    </td>
+  </tr>
+</table>
 
-| 项目 | 性质与核查边界 |
-| --- | --- |
-| [HuohuaHub](https://github.com/cangyuyi/huohuahub-ai-creator-platform) | AI 创作者平台相关业务案例。仓库公开部分 AI 日报代码、Dify DSL 与**静态交互示意**；其他线上业务模块、使用人数和效率数字是个人业务陈述，不是该仓库可复跑的结果。 |
-| [电视选购 Copilot](https://github.com/cangyuyi/tv-buying-copilot) | 电商导购场景的**独立重做原型**，不是原公司内部系统。`python3 eval.py` 检查 25 条当前实现的确定性冒烟用例；历史人工质量评分缺逐例打分，**不将 72%→92% 写作可复核结论**。 |
+<a id="more-work"></a>
+## More Work / 更多作品
 
-## 工具与方法作品
+<details>
+  <summary><strong>产品原型与工程作品</strong>　<sub>Muse Canvas / 飞书 CLI / TaskMate / Outbound</sub></summary>
+  <br/>
+  <table>
+    <tbody>
+      <tr><td width="25%"><a href="https://github.com/cangyuyi/muse-canvas"><strong>Muse Canvas</strong></a></td><td>AI 视频无限画布：节点编排、素材引用、任务队列与浏览器会话桥接。</td><td width="20%"><sub>Next.js · React Flow</sub></td></tr>
+      <tr><td><a href="https://github.com/cangyuyi/feishu-cli-bot"><strong>飞书 CLI 助手</strong></a></td><td>本地飞书 AI 助手，支持 23 个工具、function calling、写操作开关与跨平台运行。</td><td><sub>Python · Agent</sub></td></tr>
+      <tr><td><a href="https://github.com/cangyuyi/taskmate"><strong>TaskMate</strong></a></td><td>本地优先的 Android 待办与电脑端控制台，支持提醒、重复任务和双向同步。</td><td><sub>Kotlin · FastAPI</sub></td></tr>
+      <tr><td><a href="https://github.com/cangyuyi/OutboundCopilot"><strong>Outbound Copilot</strong></a></td><td>飞书表格与对话平台之间的话术测试桌面辅助工具。</td><td><sub>JavaScript · RPA</sub></td></tr>
+    </tbody>
+  </table>
+</details>
 
-| 项目 | 看点与边界 |
-| --- | --- |
-| [飞书 CLI 助手](https://github.com/cangyuyi/feishu-cli-bot) | 本地工具调用与安全开关；`PYTHONPATH=src python3 -m unittest discover -s tests`：36 项。Python 标准库运行时不代表免装 `lark-cli`、无需授权或模型服务。 |
-| [商策 Agent](https://github.com/cangyuyi/shance-commerce-agent-portfolio) | 电商内容评测框架；当前 Benchmark 结果是预置演示数据，不是已实测的 LLM 成绩。 |
-| [瑞幸用户运营 Agent](https://github.com/cangyuyi/lucky-growth-agent) | 竞赛命题下的 Dify DSL 原型，**不代表品牌方官方上线**。 |
-| [MSDS 危害识别](https://github.com/cangyuyi/msds-hazard-agent) | 实习后独立重做的 OCR / CAS 辅助识别案例；知识表未命中不等于无危害，专业结论需人工复核。 |
-| [Outbound Copilot](https://github.com/cangyuyi/OutboundCopilot) | 飞书表格到对话平台的话术测试 RPA；部署环境与时间收益需现场验证。 |
-| [网申人机协作 SOP](https://github.com/cangyuyi/campus-apply-copilot) | 专注 ATS 填表和登录、提交交接；投递数量是个人自述，不是仓库可自动验证指标。 |
-| [求职通关攻略](https://github.com/cangyuyi/china-job-search-playbook) | 全程岗位核验、材料、面试与 Offer 流程；网申专项见上一项。 |
-| [AI PM 简历写作 Skill](https://github.com/cangyuyi/ai-pm-sop) | 证据优先的简历诊断与改写 SOP；不替用户编造经历。 |
+<details>
+  <summary><strong>方法、评测与 Agent Skills</strong>　<sub>电商评测 / 企业研究 / 简历写作</sub></summary>
+  <br/>
+  <table>
+    <tbody>
+      <tr><td width="25%"><a href="https://github.com/cangyuyi/shance-commerce-agent-portfolio"><strong>商策 Agent</strong></a></td><td>电商内容评测框架；Benchmark 为预置演示数据，不是已实测的 LLM 成绩。</td></tr>
+      <tr><td><a href="https://github.com/cangyuyi/ai-pm-sop"><strong>AI PM 简历写作 Skill</strong></a></td><td>证据优先的简历诊断与改写 SOP，不替用户编造经历。</td></tr>
+      <tr><td><a href="https://github.com/cangyuyi/employer-research-skill"><strong>企业研究 Skill</strong></a></td><td>证据优先的企业与行业求职研究，支持来源核验和离线检查。</td></tr>
+    </tbody>
+  </table>
+</details>
 
-## 工程探索与社区
+<details>
+  <summary><strong>求职工具与工程探索</strong>　<sub>网申 SOP / 求职攻略 / 浏览器游戏</sub></summary>
+  <br/>
+  <table>
+    <tbody>
+      <tr><td width="25%"><a href="https://github.com/cangyuyi/campus-apply-copilot"><strong>网申人机协作 SOP</strong></a></td><td>专注 ATS 填表和登录、提交交接；投递数量不是仓库可自动验证指标。</td></tr>
+      <tr><td><a href="https://github.com/cangyuyi/china-job-search-playbook"><strong>求职通关攻略</strong></a></td><td>岗位核验、材料、面试与 Offer 全流程 Skill。</td></tr>
+      <tr><td><a href="https://github.com/cangyuyi/midnight-survivors"><strong>长夜收割者</strong></a></td><td>TypeScript 浏览器游戏工程练习；目前未指定开源许可证。</td></tr>
+      <tr><td><a href="https://github.com/cangyuyi/dawn-survivors"><strong>黎明幸存者</strong></a></td><td>早期构建产物展示，仓库不含可供审查的源代码。</td></tr>
+      <tr><td><a href="https://github.com/cangyuyi/BossHunter"><strong>BossHunter</strong></a></td><td>社区项目的 Fork，不列作本人原创项目。</td></tr>
+    </tbody>
+  </table>
+</details>
 
-- [长夜收割者](https://github.com/cangyuyi/midnight-survivors)：浏览器游戏工程练习；**目前未指定开源许可证**。
-- [黎明幸存者](https://github.com/cangyuyi/dawn-survivors)：早期**构建产物展示**，仓库不含可供审查的源代码。
-- [BossHunter](https://github.com/cangyuyi/BossHunter)：社区项目的 **fork**，不列作本人原创项目；如需了解贡献，应以可核实的 PR / 提交为准。
+## Stack / 技术与方法栈
 
-## 联系
+<table>
+  <tr>
+    <td width="33.33%" valign="top"><sub>PRODUCT</sub><br/><br/><strong>需求洞察 · 0→1 落地</strong><br/><sub>工作流设计 / 交互原型 / 人机协作 / 风险兜底</sub></td>
+    <td width="33.33%" valign="top"><sub>AI &amp; EVALUATION</sub><br/><br/><strong>Agent · RAG · Tool Calling</strong><br/><sub>LangGraph / Dify / LLM Evaluation / HITL</sub></td>
+    <td width="33.33%" valign="top"><sub>ENGINEERING</sub><br/><br/><strong>Python · TypeScript · Kotlin</strong><br/><sub>Next.js / FastAPI / Go / React Flow</sub></td>
+  </tr>
+</table>
 
-如有 AI 产品 / Agent / AI 电商岗位交流机会，可通过 [GitHub Issue](https://github.com/cangyuyi/cangyuyi/issues) 联系，或邮件至 **wangzedong2027@foxmail.com**。具体业务指标与职责范围以面谈时可合规提供的材料为准。
+<details>
+  <summary><sub>关于公开作品、业务材料与测试数据的统计口径</sub></summary>
+  <br/>
+  <sub>业务实践与独立原型分层呈现。公开代码用于核查实现和方法，不自动证明线上业务结果；测试数字的样本、数据类型与复现命令以各仓库 README 为准。具体业务指标与职责范围以面谈时可合规提供的材料为准。</sub>
+</details>
+
+<br/>
+<hr/>
+
+<div align="center">
+  <sub>OPEN TO AI PRODUCT / AGENT / AI COMMERCE OPPORTUNITIES</sub><br/><br/>
+  <strong>如果你也在做 AI 产品、Agent 应用或 AI 电商，欢迎交流。</strong><br/><br/>
+  <a href="mailto:wangzedong2027@foxmail.com"><strong>wangzedong2027@foxmail.com</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/cangyuyi/cangyuyi/issues"><strong>GitHub Issues</strong></a>
+</div>

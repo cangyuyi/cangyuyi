@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">王泽栋 · AI 产品经理</title>
+  <desc id="desc">以需求、工作流、评测和人工兜底为主题的深色个人作品集横幅</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090B10"/>
+      <stop offset="0.58" stop-color="#10121B"/>
+      <stop offset="1" stop-color="#151329"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C4B5FD"/>
+      <stop offset="1" stop-color="#8B9DFF"/>
+    </linearGradient>
+    <radialGradient id="purpleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mintGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#A3E635" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#A3E635" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#FFFFFF" opacity="0.045"/>
+    </pattern>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="380" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="380" rx="28" fill="url(#dots)"/>
+  <circle cx="1050" cy="40" r="330" fill="url(#purpleGlow)"/>
+  <circle cx="510" cy="400" r="260" fill="url(#mintGlow)"/>
+  <rect x="1" y="1" width="1198" height="378" rx="27" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"/>
+  <rect x="64" y="54" width="34" height="3" rx="1.5" fill="url(#brand)"/>
+
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <text x="112" y="60" fill="#A7ACB9" font-size="13" font-weight="650" letter-spacing="2.5">PORTFOLIO / AI PRODUCT · 2026</text>
+    <text x="62" y="151" fill="#F7F7F4" font-size="66" font-weight="760" letter-spacing="-1">王泽栋</text>
+    <text x="286" y="149" fill="#777E90" font-size="18" font-weight="550" letter-spacing="2">WANG ZEDONG</text>
+    <text x="64" y="202" fill="#B9A7F2" font-size="29" font-weight="650">AI 产品经理 · Agent 应用</text>
+    <text x="64" y="251" fill="#D8DBE3" font-size="23" font-weight="450">让 AI 产品从「能演示」走到「可验证」。</text>
+    <text x="64" y="284" fill="#858B99" font-size="15">AIGC 平台 / Agent 工作流 / AI 电商 · 杭州 · 2027 届</text>
+
+    <g font-size="12" font-weight="650" letter-spacing="1.1">
+      <rect x="64" y="316" width="142" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.045" stroke="#FFFFFF" stroke-opacity="0.09"/>
+      <text x="135" y="336" text-anchor="middle" fill="#B9BECA">MAGO CO-FOUNDER</text>
+      <rect x="218" y="316" width="136" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.045" stroke="#FFFFFF" stroke-opacity="0.09"/>
+      <text x="286" y="336" text-anchor="middle" fill="#B9BECA">4 AI INTERNSHIPS</text>
+      <rect x="366" y="316" width="158" height="30" rx="15" fill="#A3E635" fill-opacity="0.07" stroke="#A3E635" stroke-opacity="0.18"/>
+      <text x="445" y="336" text-anchor="middle" fill="#C8EF8B">EVALUATION FIRST</text>
+    </g>
+  </g>
+
+  <line x1="640" y1="58" x2="640" y2="324" stroke="#FFFFFF" stroke-opacity="0.075"/>
+
+  <g filter="url(#softShadow)" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="692" y="60" width="444" height="132" rx="20" fill="#FFFFFF" fill-opacity="0.048" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="718" y="88" fill="#9298A8" font-size="11" font-weight="700" letter-spacing="1.8">AGENT WORKFLOW</text>
+    <text x="1068" y="88" text-anchor="end" fill="#C4B5FD" font-size="11" font-weight="650">DESIGN → VERIFY</text>
+    <path d="M 762 132 H 850 M 932 132 H 1020" stroke="#62697A" stroke-width="1.5"/>
+    <path d="M 850 132 L 842 127 M 850 132 L 842 137 M 1020 132 L 1012 127 M 1020 132 L 1012 137" stroke="#62697A" stroke-width="1.5" fill="none"/>
+    <rect x="718" y="108" width="88" height="48" rx="12" fill="#8B9DFF" fill-opacity="0.10" stroke="#8B9DFF" stroke-opacity="0.25"/>
+    <circle cx="737" cy="132" r="5" fill="#8B9DFF"/>
+    <text x="750" y="137" fill="#E3E7FF" font-size="13" font-weight="600">需求</text>
+    <rect x="850" y="108" width="82" height="48" rx="12" fill="#C4B5FD" fill-opacity="0.09" stroke="#C4B5FD" stroke-opacity="0.22"/>
+    <circle cx="869" cy="132" r="5" fill="#C4B5FD"/>
+    <text x="882" y="137" fill="#EAE4FF" font-size="13" font-weight="600">编排</text>
+    <rect x="1020" y="108" width="90" height="48" rx="12" fill="#A3E635" fill-opacity="0.08" stroke="#A3E635" stroke-opacity="0.23"/>
+    <circle cx="1039" cy="132" r="5" fill="#A3E635"/>
+    <text x="1052" y="137" fill="#E2F7C4" font-size="13" font-weight="600">验证</text>
+
+    <rect x="692" y="208" width="258" height="116" rx="20" fill="#FFFFFF" fill-opacity="0.048" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="718" y="238" fill="#9298A8" font-size="11" font-weight="700" letter-spacing="1.8">EVALUATION</text>
+    <text x="718" y="277" fill="#F2F3F6" font-size="22" font-weight="650">可追溯评测</text>
+    <path d="M 724 301 H 936" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <rect x="866" y="250" width="10" height="43" rx="4" fill="#8B9DFF" opacity="0.42"/>
+    <rect x="886" y="263" width="10" height="30" rx="4" fill="#8B9DFF" opacity="0.62"/>
+    <rect x="906" y="242" width="10" height="51" rx="4" fill="#C4B5FD" opacity="0.82"/>
+    <rect x="926" y="230" width="10" height="63" rx="4" fill="#A3E635" opacity="0.88"/>
+
+    <rect x="966" y="208" width="170" height="116" rx="20" fill="#FFFFFF" fill-opacity="0.048" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="990" y="238" fill="#9298A8" font-size="11" font-weight="700" letter-spacing="1.8">HITL</text>
+    <circle cx="1051" cy="275" r="25" fill="#A3E635" fill-opacity="0.08" stroke="#A3E635" stroke-opacity="0.22"/>
+    <path d="M 1039 275 L 1048 284 L 1065 264" fill="none" stroke="#C8EF8B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1051" y="314" text-anchor="middle" fill="#B9BECA" font-size="11">人工确认兜底</text>
+  </g>
+</svg>
